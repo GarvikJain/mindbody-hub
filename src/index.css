@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Corporate Wellness Design System - Calming and Professional */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 218 100% 97%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 150 60% 90%;
+    --secondary-foreground: 150 70% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 25% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 100% 85%;
+    --accent-foreground: 195 100% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 25% 88%;
+    --input: 215 25% 92%;
+    --ring: 210 100% 56%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Wellness Theme Colors */
+    --wellness-primary: 150 65% 50%;
+    --wellness-secondary: 210 100% 56%;
+    --wellness-accent: 45 100% 65%;
+    --wellness-success: 120 60% 50%;
+    --wellness-warning: 35 100% 55%;
+    
+    /* Gradients */
+    --gradient-wellness: linear-gradient(135deg, hsl(150 65% 50%), hsl(210 100% 56%));
+    --gradient-calm: linear-gradient(135deg, hsl(195 100% 85%), hsl(210 100% 90%));
+    --gradient-energy: linear-gradient(135deg, hsl(45 100% 65%), hsl(35 100% 55%));
+    
+    /* Shadows */
+    --shadow-wellness: 0 4px 20px hsl(150 65% 50% / 0.15);
+    --shadow-card: 0 2px 10px hsl(215 25% 15% / 0.08);
+    --shadow-floating: 0 8px 32px hsl(215 25% 15% / 0.12);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +71,50 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 215 25% 8%;
+    --foreground: 215 25% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 10%;
+    --card-foreground: 215 25% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 10%;
+    --popover-foreground: 215 25% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 215 25% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 30% 20%;
+    --secondary-foreground: 150 60% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 195 80% 30%;
+    --accent-foreground: 195 100% 85%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 215 25% 18%;
+    --input: 215 25% 15%;
+    --ring: 210 100% 65%;
+
+    /* Dark mode wellness colors */
+    --wellness-primary: 150 50% 45%;
+    --wellness-secondary: 210 100% 65%;
+    --wellness-accent: 45 90% 60%;
+    --wellness-success: 120 50% 45%;
+    --wellness-warning: 35 90% 55%;
+    
+    /* Dark gradients */
+    --gradient-wellness: linear-gradient(135deg, hsl(150 50% 45%), hsl(210 100% 65%));
+    --gradient-calm: linear-gradient(135deg, hsl(195 80% 30%), hsl(210 80% 35%));
+    --gradient-energy: linear-gradient(135deg, hsl(45 90% 60%), hsl(35 90% 55%));
+    
+    /* Dark shadows */
+    --shadow-wellness: 0 4px 20px hsl(150 50% 45% / 0.2);
+    --shadow-card: 0 2px 10px hsl(0 0% 0% / 0.3);
+    --shadow-floating: 0 8px 32px hsl(0 0% 0% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +132,45 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .wellness-gradient {
+    background: var(--gradient-wellness);
+  }
+  
+  .calm-gradient {
+    background: var(--gradient-calm);
+  }
+  
+  .energy-gradient {
+    background: var(--gradient-energy);
+  }
+  
+  .wellness-shadow {
+    box-shadow: var(--shadow-wellness);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .floating-shadow {
+    box-shadow: var(--shadow-floating);
+  }
+  
+  .wellness-card {
+    @apply bg-card border border-border rounded-xl card-shadow transition-all duration-300 hover:floating-shadow;
+  }
+  
+  .stat-card {
+    @apply wellness-card p-6 text-center;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
   }
 }
